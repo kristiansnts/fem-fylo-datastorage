@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Fylo data storage component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { display: none; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
   <main>
-    <div class="upper">
+    <div class="bracket upper">
       <div class="logo">
         <img src="images/logo.svg" alt="">
       </div>
@@ -27,7 +28,7 @@
         <button><img src="images/icon-upload.svg" alt=""></button>
       </div>
     </div>
-    <div class="lower">
+    <div class="bracket lower">
       <span class="information">You’ve used <span class="storage">815 GB</span> of your storage</span>
       <div class="range">
         <input type="range" name="range" id="" min="0" max="1000">
@@ -39,7 +40,6 @@
       <div class="storage-info"><span class="total">185</span> GB Left</div>
     </div>
   </main>
-
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
