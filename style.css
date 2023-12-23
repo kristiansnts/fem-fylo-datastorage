@@ -52,3 +52,39 @@ main {
     margin-right: 15px;
     border-radius: 10px;
 }
+
+.lower {
+    border-radius: 5px;
+    color: var(--text);
+}
+
+.lower input[type="range"] {
+    -webkit-appearance: none;
+    /* overflow: hidden; */
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    --webkitProgressPercent: 0%;
+}
+
+.lower input[type="range"]::-webkit-slider-runnable-track {
+    border-radius: 0.5rem;
+    background-color: var(--darker-blue);
+    background-image: linear-gradient(
+        90deg, 
+        hsl(6, 100%, 80%) --webkitProgressPercent,
+        hsl(335, 100%, 65%) --webkitProgressPercent
+        );
+    height: 1.2rem;
+}
+
+.lower input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: white;
+    margin-top: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
