@@ -16,15 +16,19 @@ body {
     font-family: 'Raleway', sans-serif;
     background: url("images/bg-mobile.png") no-repeat;
     background-size: 100%;
+    position: relative;
 }
 
 main {
     width: min(90%, 800px);
-    margin: 50px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 
 .bracket {
-    padding: 40px 40px;
+    padding: 30px 30px;
     margin: 15px 0;
     background-color: var(--dark-blue);
 }
@@ -34,11 +38,11 @@ main {
 }
 
 .upper .logo img{
-    width: 45%;
+    width: 30%;
 }
 
 .upper .action {
-    width: 150px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -48,7 +52,7 @@ main {
     cursor: pointer;
     border: none;
     background-color: var(--darker-blue);
-    padding: 12px 15px;
+    padding: 10px 14px;
     margin-right: 15px;
     border-radius: 10px;
 }
@@ -56,35 +60,74 @@ main {
 .lower {
     border-radius: 5px;
     color: var(--text);
+    position: relative;
 }
 
-.lower input[type="range"] {
-    -webkit-appearance: none;
-    /* overflow: hidden; */
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
+.lower .information {
+    display: block;
+    text-align: center;
+}
+
+.lower .information .storage {
+    font-weight: 700;
+    color: white;
+}
+
+.slider {
     width: 100%;
-    margin: 10px 0;
-    --webkitProgressPercent: 0%;
-}
-
-.lower input[type="range"]::-webkit-slider-runnable-track {
-    border-radius: 0.5rem;
+    height: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
     background-color: var(--darker-blue);
-    background-image: linear-gradient(
-        90deg, 
-        hsl(6, 100%, 80%) --webkitProgressPercent,
-        hsl(335, 100%, 65%) --webkitProgressPercent
-        );
-    height: 1.2rem;
 }
 
-.lower input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+.progress {
+    width: 75%;
+    height: 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: relative;
+}
+
+.thump {
+    width: 15px;
+    height: 15px;
     background-color: white;
-    margin-top: 3px;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
+    border-radius: 50%;
+    position: sticky;
+    left: 100%;
+}
+
+.range {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.storage-left {
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: -30px;
+    left: 30%;
+}
+
+.storage-left .total {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 5px;
+    color: var(--darker-blue);
+}
+
+.storage-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.storage-info span {
+    display: block;
 }
