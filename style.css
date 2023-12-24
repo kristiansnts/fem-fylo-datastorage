@@ -15,7 +15,8 @@
 body {
     font-family: 'Raleway', sans-serif;
     background: url("images/bg-mobile.png") no-repeat;
-    background-size: 100%;
+    background-color: var(--darker-blue);
+    background-size: 130%;
     position: relative;
 }
 
@@ -96,7 +97,7 @@ main {
     background-color: white;
     border-radius: 50%;
     position: sticky;
-    left: 100%;
+    left: 120%;
 }
 
 .range {
@@ -130,4 +131,52 @@ main {
 
 .storage-info span {
     display: block;
+}
+
+@media screen and (min-width: 1020px) {
+    body {
+        background: url("images/bg-desktop.png") no-repeat fixed bottom;
+        background-color: var(--darker-blue);
+        background-size: 100% 60%;
+        display: flex;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 20px;
+        transform: translate(-50%, 100%);
+    }
+
+    .upper {
+        width: 300px;
+    }
+
+    .lower {
+        width: 600px;
+        position: relative;
+    }
+
+    .thump {
+        left: 120%;
+    }
+
+    .storage-left{
+        position: absolute;
+        bottom: 120px;
+        left: 65%;
+    }
+
+    .storage-left:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: auto;
+        right: 0px;
+        bottom: -20px;
+        border: 12px solid;
+        border-color: rgb(255, 255, 255) rgb(255, 255, 255) transparent transparent;
+    }
 }
